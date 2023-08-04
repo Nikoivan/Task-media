@@ -1,0 +1,31 @@
+.post {
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.post-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-wrap {
+    margin-top: 10px;
+}
+
+.date-wrap {
+    flex-shrink: 0;
+}
+
+.content {
+    font-size: 20px;
+}
+
+.post-footer {
+    margin: 15px 0;
+}
+
+.eye {
+    font-size: 20px;
+}
