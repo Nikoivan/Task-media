@@ -1,0 +1,8 @@
+{
+    "rules": {
+      "jest/no-standalone-expect": [
+        "error",
+        { "additionalTestBlockFunctions": ["each.test"] }
+      ]
+    }
+  }
