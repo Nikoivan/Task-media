@@ -2,12 +2,14 @@
     "plugins": ["prettier"],
     "extends": ["eslint:recommended", "plugin:prettier/recommended"],
     "env": {
+      "node": true,
       "es6": true,
       "browser": true,
       "jest/globals": true
     },
     "parserOptions": {
-      "sourceType": "module"
+      "sourceType": "module",
+      "ecmaVersion": 8
     },
     "rules": {
       "no-unused-vars": "warn"

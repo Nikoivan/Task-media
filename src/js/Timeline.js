@@ -57,7 +57,7 @@ export default class TimeLine {
     this.cameraBtn.addEventListener("click", this.onVideo);
   }
 
-  onAudio(e) {
+  onAudio() {
     const { element, startBtn, stopBtn, seconds, minutes } =
       this.creatorAPI.recordBtns;
 

@@ -1,5 +1,3 @@
-import { min } from "moment";
-
 export default class TimerAPI {
   constructor() {
     this.minutes = null;

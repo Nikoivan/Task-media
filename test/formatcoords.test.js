@@ -10,14 +10,3 @@ const geoExpList = [
 test.each(geoExpList)("for method formatCoords by %q", (value, result) => {
   expect(formatCoords(value)).toBe(result);
 });
-
-/*
-test("Test for correct value in method formatCoords", () => {
-  const result = formatCoords("[51.50851, -0.12572]");
-  expect(result).toBe("51.50851, -0.12572");
-});
-
-test("Test for incorrect value in method formatCoords", () => {
-  const result = formatCoords("[51.5d0851, -0.12572]");
-  expect(result).toBe(null);
-});*/
