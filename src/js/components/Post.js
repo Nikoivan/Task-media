@@ -2,12 +2,13 @@ import "./css/post.css";
 import moment from "moment/moment";
 
 export default class Post {
-  constructor(coords, content) {
+  constructor(data) {
+    const { coords, content } = data;
     this.coords = `[${coords}]`;
     this.content = content;
   }
 
-  get element() {
+  getElement(el) {
     const element = document.createElement("li");
     element.classList.add("post");
     element.innerHTML = `<div class="timeline-post-wrap">
@@ -25,6 +26,9 @@ export default class Post {
         <span class="eye">&#x1F441;</span>
     </div>
 </div>`;
+    if (el) {
+      element.append(el);
+    }
     return element;
   }
 }

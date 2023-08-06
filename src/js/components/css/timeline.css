@@ -2,7 +2,11 @@
     list-style-type: none;
 }
 
-.timeline-form {
+.timeline-footer {
+    position: relative;
+}
+
+.timeline-form { 
     padding: 3px 15px;
     border: 1px solid #000;
     border-radius: 3px;
@@ -20,15 +24,3 @@
     outline: none;
 }
 
-.btns {
-   display: flex;
-}
-
-.logo {
-    width: 20px;
-    border-radius: 50%;
-}
-
-.microphone {
-    margin-right: 10px;
-}

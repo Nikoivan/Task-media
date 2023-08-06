@@ -1,4 +1,4 @@
-import "./css/modal.css";
+import "./css/creator.css";
 
 export default class Modal {
   constructor() {}
@@ -32,7 +32,25 @@ export default class Modal {
     };
   }
 
-  get window() {
+  get warnWin() {
+    const element = document.createElement("div");
+    element.classList.add("confirm-window");
+    element.innerHTML = `<div class="confirm-header"><p class="confirm-title">Что-то пошло не так</p></div>
+    <div class="confirm-main"><p class="confirm-text">К сожалению нам не удалось получить доступ к микрофону, пожалуйста, дайте разрешение на использование микрофона.</p>    
+    </div>       
+    <div class="confirm-footer">
+        <button class="close-btn">Ок</button>
+    </div>`;
+
+    const closeBtn = element.querySelector(".close-btn");
+
+    return {
+      element,
+      closeBtn,
+    };
+  }
+
+  get confWin() {
     const element = document.createElement("div");
     element.classList.add("confirm-window");
     element.innerHTML = `<div class="confirm-header"><span class="confirm-title">Удалить тикет</span></div>
@@ -42,5 +60,34 @@ export default class Modal {
         <span class="confirm-accept-btn">Ок</span>
     </div>`;
     return element;
+  }
+
+  get recordBtns() {
+    const element = document.createElement("div");
+    element.classList.add("rec-btns");
+    element.innerHTML = `<button class="btn-start"><span class="btn-wrap">&#10003;</span></button>
+    <span class="minutes">00</span><span class="break">:</span><span class="seconds">00</span>
+    <button class="btn-stop"><span class="btn-wrap btn-wrap-last">&times;</span></button>`;
+
+    return {
+      element,
+      startBtn: element.querySelector(".btn-start"),
+      stopBtn: element.querySelector(".btn-stop"),
+      seconds: element.querySelector(".seconds"),
+      minutes: element.querySelector(".minutes"),
+    };
+  }
+
+  get audioRecord() {
+    const element = document.createElement("div");
+    element.classList.add("cont");
+    element.innerHTML = `<audio class="audio" controls></audio>`;
+
+    const audio = element.querySelector(".audio");
+
+    return {
+      element,
+      audio,
+    };
   }
 }
